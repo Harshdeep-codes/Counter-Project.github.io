@@ -1,0 +1,102 @@
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <style>
+       
+            /*Body*/
+            
+            body {
+                position: relative;
+                left: 0%;
+                text-align: center;
+                justify-content: center;
+                align-items: center;
+                margin-top: 250px;
+            }
+  
+            /*Container = Division */
+            
+            .container {
+                justify-content: center;
+                align-items: center;
+                display: flex;
+                height: 100%;
+                text-align: center;
+            }
+  
+            /*Style for Increment amnd decrement Buttons */
+  
+            button {
+                width: 90px;
+                height: 40px;
+                font-size: 30px;
+                background-color: #FFBA3F;
+                color: black;
+                border: 2px solid #FFBA3F;
+                border-radius: 8px;
+            }
+  
+            /* Hover Effect for Buttons */
+  
+            button:hover {
+                background-color: #FF8F37;
+                border: 2px solid #FF8F37;
+                color: black;
+            }
+  
+            /* Count value h2 tag styling*/
+  
+            h2 {
+                color: #FF8F37;
+                margin: 0 40px;
+                font-size: 45px;
+                font-family: Arial, Helvetica, sans-serif;
+                
+            }
+            
+            /*Main heading h1 tag styling*/
+  
+            h1 {
+                font-size: 35px;
+                color: black;
+                text-align: center;
+                font-family: Helvetica;
+            }
+        </style>
+    </head>
+  
+    <body>
+        <!-- give a suitable heading using h1 tag-->
+        <h1> Increment and Decrement counter </h1>
+  
+        <div class = "container">
+            <!-- adding button and heading to show the digits -->
+            <!-- increment() and decrement() functions for performing increasing/decreasing  the value of count-->
+            <button onclick="increment()">+</button>
+            <h2 id="counting"></h2>
+            <button onclick="decrement()">-</button>
+        </div>
+
+        <!--Javascript Code-->
+        <script>
+            
+            //Initialising a variable name count
+            var count = 0;
+  
+            //Printing default value of count that is 0 in h2 tag
+            document.getElementById("counting").innerText = count;
+  
+            //Increment function
+            function increment() {
+                count = count + 1;
+                document.getElementById("counting").innerText = count;
+            }
+            //Decrement function
+            function decrement() {
+                count = count - 1;
+                document.getElementById("counting").innerText = count;
+            }
+        </script>
+    </body>
+</html>
